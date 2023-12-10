@@ -8,11 +8,11 @@ To start the project, I needed a dataset specifically tailored to recognize moun
 
 ## Model Selection
 
-For the NER task, I opted for a state-of-the-art approach using a pre-trained BERT (Bidirectional Encoder Representations from Transformers) model. BERT is known for its powerful contextualized embeddings, making it an excellent choice for sequence labeling tasks like NER.
+For the NER task, I opted for a state-of-the-art approach using a pre-trained BERT (Bidirectional Encoder Representations from Transformers) model. BERT is known for its powerful contextualized embeddings, making it an excellent choice for sequence labeling tasks like NER. Here is reference to model [BERT Model](https://github.com/huggingface/transformers)
 
 ## Training and Results
 
-The training process involved fine-tuning the pre-trained BERT model on the custom NER dataset. The model demonstrated solid performance, accurately identifying mountain-related entities in the text. The precision, recall, and F1-score metrics reflected the effectiveness of the chosen model architecture.
+The training process involved fine-tuning the pre-trained BERT model on the custom NER dataset. The model demonstrated solid performance, accurately identifying mountain-related entities in the text.
 
 ## Conclusion
 
