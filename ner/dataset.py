@@ -1,5 +1,4 @@
 import torch
-from torch.utils.data import Dataset
 from config import Config
         
     
@@ -30,7 +29,7 @@ class Dataset:
         ids.extend(inputs)
         target_tag.extend(input_len * [tags[i]])
     
-    #To Add Special Tokens, subtract 2 from MAX_LEN
+    #Add Special Tokens, subtract 2 from MAX_LEN
     ids = ids[:Config.MAX_LEN - 2]
     target_tag = target_tag[:Config.MAX_LEN - 2]
 
@@ -42,7 +41,6 @@ class Dataset:
     token_type_ids = [0] * len(ids)
 
     #Add Padding if the input_len is small
-
     padding_len = Config.MAX_LEN - len(ids)
     ids = ids + ([0] * padding_len)
     target_tags = target_tags + ([0] * padding_len)

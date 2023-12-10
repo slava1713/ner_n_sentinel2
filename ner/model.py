@@ -11,6 +11,7 @@ class Model(torch.nn.Module):
         self.bert_drop = torch.nn.Dropout(0.3)
         self.out_tag = torch.nn.Linear(768, self.num_tag)
         
+    #Forward Pass
     def forward(self, ids, mask, token_type_ids, target_tags):
         output, _ = self.bert(ids, attention_mask=mask, token_type_ids=token_type_ids, return_dict=False)
         bert_out = self.bert_drop(output) 
